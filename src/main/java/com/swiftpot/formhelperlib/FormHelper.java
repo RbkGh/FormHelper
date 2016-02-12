@@ -1,5 +1,6 @@
 package com.swiftpot.formhelperlib;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -12,28 +13,28 @@ import java.util.ArrayList;
  */
 public abstract class FormHelper implements View.OnClickListener{
 
+    public FormHelper(){}
 
-    public FormHelper(EditText [] editTexts,Method nonStaticVoidMethod){
+    public FormHelper(EditText [] editTexts,Method nonStaticVoidMethod,Object object){
         this.editTexts = editTexts;
         this.nonStaticVoidMethod = nonStaticVoidMethod;
+        this.object = object;
     }
     EditText [] editTexts;
     Method nonStaticVoidMethod;
+    Object object;
 
     @Override
     public void onClick(View view) {
-    if(isEditTextEmpty(editTexts) == false){
+        Log.i("EmptyTag","Any of the fields Empty?"+isEditTextEmpty(editTexts));
+        if(isEditTextEmpty(editTexts) == false){
         try {
-            Class c = Class.forName(getClass().getName());
-            Object t = c.newInstance();
-            nonStaticVoidMethod.invoke(t);
+            //Class c = Class.forName(nonStaticVoidMethod.getClass().getName());
+            //Object t = c.newInstance();//cast(nonStaticVoidMethod.getDeclaringClass());
+            nonStaticVoidMethod.invoke(object);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }catch (ClassNotFoundException e){
-            e.printStackTrace();
-        }catch (InstantiationException e){
             e.printStackTrace();
         }
     }else{
