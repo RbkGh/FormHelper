@@ -7,14 +7,23 @@
 add this to your build.gradle.
 
 #======For Gradle Users=========
-repositories{
- maven {
-        url  "http://dl.bintray.com/rbkgh/maven"
-    }
-}
-and 
-compile 'com.swiftpot:com.swiftpot.formhelper:1.0.0'
+repositories{<br/>
+ maven {<br/>
+        url  "http://dl.bintray.com/rbkgh/maven"<br/>
+    }<br/>
+}<br/>
+and <br/>
+compile 'com.swiftpot:com.swiftpot.formhelper:1.0.0'<br/>
 #======For Gradle Users=========
+
+#================For Maven users===============
+<dependency>
+  <groupId>com.swiftpot</groupId>
+  <artifactId>com.swiftpot.formhelper</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+#================For Maven users===============
 
 
 #--Future To-Do--
