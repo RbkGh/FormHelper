@@ -7,29 +7,30 @@
 add this to your build.gradle.
 
 #======For Gradle Users=========
-repositories{<br/>
- maven {<br/>
-        url  "http://dl.bintray.com/rbkgh/maven"<br/>
-    }<br/>
-}<br/>
-and <br/>
-compile 'com.swiftpot:com.swiftpot.formhelper:1.0.0'<br/>
+repositories{
+ maven {
+        url  "http://dl.bintray.com/rbkgh/maven"
+    }
+}
+and 
+
+compile 'com.swiftpot:com.swiftpot.formhelper:1.0.0'
 #======For Gradle Users=========
 
-#====For Maven users===<br/>
-<dependency><br/>
-&nbsp<groupId>com.swiftpot</groupId><br/>
-&nbsp<artifactId>com.swiftpot.formhelper</artifactId><br/>
-&nbsp<version>1.0.0</version><br/>
-&nbsp<type>pom</type><br/>
-</dependency><br/>
-#====For Maven users===<br/>
+#====For Maven users===
+<dependency>
+<groupId>com.swiftpot</groupId>
+<artifactId>com.swiftpot.formhelper</artifactId>
+<version>1.0.0</version>
+<type>pom</type>
+</dependency>
+#====For Maven users===
 
-#===For Ivy Users===<br/>
-<dependency org='com.swiftpot' name='com.swiftpot.formhelper' rev='1.0.0'><br/>
- &nbsp<artifact name='$AID' ext='pom'></artifact><br/>
-</dependency><br/>
-#===For Ivy Users===
+##===For Ivy Users===<br/>
+<dependency org='com.swiftpot' name='com.swiftpot.formhelper' rev='1.0.0'>
+ <artifact name='$AID' ext='pom'></artifact>
+</dependency>
+##===For Ivy Users===
 
 
 #--Future To-Do--
