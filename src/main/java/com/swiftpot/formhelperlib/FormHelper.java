@@ -10,6 +10,10 @@ import java.util.ArrayList;
 
 /**
  * Created by Rodney on 12-Feb-16.
+ * Just set this as the OnclickListener and provide the parameters needed accordingly
+ * @param EditText [] editTexts This is the array of edittexts to check for null.
+ * @param Method nonStaticVoidMethod -Make sure the method supplied is not static and must be void as return type.
+ * @param Object object -Object to invoke
  */
 public abstract class FormHelper implements View.OnClickListener{
 
@@ -29,8 +33,6 @@ public abstract class FormHelper implements View.OnClickListener{
         Log.i("EmptyTag","Any of the fields Empty?"+isEditTextEmpty(editTexts));
         if(isEditTextEmpty(editTexts) == false){
         try {
-            //Class c = Class.forName(nonStaticVoidMethod.getClass().getName());
-            //Object t = c.newInstance();//cast(nonStaticVoidMethod.getDeclaringClass());
             nonStaticVoidMethod.invoke(object);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
