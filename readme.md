@@ -53,6 +53,10 @@ compile 'com.swiftpot:com.swiftpot.formhelper:1.0.0'
 ##===For Ivy Users===
 
 
+##DETAILED EXAMPLE TUTORIAL-HOW TO USE THE LIBRARY IN YOUR APP.
+Kindly click on this Link Below:
+- [DroidFormHelperExampleApp](https://github.com/RbkGh/DroidFormHelperExampleApp)
+
 #--Future To-Do--
 #1.Check Email conformance,
 #2.Check PhoneNumber compliance,
